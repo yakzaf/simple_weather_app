@@ -1,38 +1,71 @@
+html,
+body,
+#root,
 .App {
+  height: 100%;
+}
+.ui.container {
+  display: flex;
+  padding: 1vh;
+}
+.container-grid {
+  width: 100vw;
+  display: grid;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.input-group {
+  display: grid;
+  align-items: center;
+}
+.input-label {
+  grid-column: 1 / 2;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-input {
+  grid-column: 2 / 12;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.units-selector {
+  grid-column: 12 / 13;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.search-icon {
+  max-width: 4rem;
+  grid-column: 13 / 14;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.weather-content {
+  display: grid;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.datetime {
+  grid-column: 1/2;
+  vertical-align: middle;
+  display: flex;
+  justify-self: start;
+}
+.weather-desc {
+  grid-column: 2/3;
+  display: flex;
+  justify-self: left;
+}
+.temp-info {
+  grid-column: 4 / 5;
+  display: flex;
+}
+.weather-icon {
+  max-width: 4rem;
+}
+.weather-extra {
+  display: grid;
+  justify-self: center;
+}
+#forecast-list {
+  overflow-y: auto;
+  max-height: 75vh;
+  margin-top: 0;
+}
+.ui.grid > .column:not(.row),
+.ui.grid > .row > .column {
+  display: flex;
 }
